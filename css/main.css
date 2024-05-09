@@ -1,0 +1,115 @@
+:root {
+  --main-color: #2196f3;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: black;
+}
+.overlay {
+  background-color: #2195f37c;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  button {
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
+.game {
+  width: 45%;
+  .info {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #2196f3;
+    margin-bottom: 15px;
+    color: white;
+    p {
+      font-size: 17px;
+    }
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+    gap: 15px;
+
+    &.no-click {
+      pointer-events: none;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+      .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border: 3px solid #2196f3;
+      }
+      .front {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before {
+          content: "?";
+          color: white;
+          font-size: 80px;
+          font-weight: bold;
+        }
+      }
+      .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background-color: #1570bb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotateY(180deg);
+        svg {
+          color: white;
+          font-size: 50px;
+        }
+      }
+      &.is-flipped {
+        transform: rotateY(180deg);
+        pointer-events: none;
+      }
+      &.matched {
+        transform: rotateY(180deg);
+        pointer-events: none;
+      }
+    }
+  }
+}

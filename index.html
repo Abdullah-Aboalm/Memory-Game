@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="overlay">
+      <button>Start Game</button>
+    </div>
+    <div class="game">
+      <div class="info">
+        <p>Hello: <span class="name">Unknown</span></p>
+        <p>Wrong Tries: <span class="tries">0</span></p>
+      </div>
+      <div class="cards">
+        <div class="card" data-tech="angular">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-angular"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="angular">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-angular"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="html">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="html">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="css">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="css">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="node">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-node"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="node">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-node"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="js">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-js"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="js">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-js"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="react">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-react"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="react">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-react"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="github">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="github">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="bootstrap">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-bootstrap"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="bootstrap">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-bootstrap"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="vuejs">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-vuejs"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="vuejs">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-vuejs"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="php">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-php"></i>
+          </div>
+        </div>
+        <div class="card" data-tech="php">
+          <div class="face front"></div>
+          <div class="face back">
+            <i class="fa-brands fa-php"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio id="success" src="audio/success.mp3" preload="auto"></audio>
+    <audio id="failed" src="audio/failed.mp3" preload="auto"></audio>
+
+    <script src="js/all.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
